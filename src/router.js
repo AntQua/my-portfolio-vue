@@ -3,8 +3,9 @@ import TheHome from './pages/TheHome.vue';
 import ProjectDetail from './pages/ProjectDetail.vue';
 
 const routes = [
+  { path: '/', redirect: '/home' }, 
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: TheHome
   },
