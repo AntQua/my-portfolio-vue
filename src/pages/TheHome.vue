@@ -103,59 +103,6 @@ export default {
 </script>
   
 <style scoped>
-/* -------------------- Intro Section --------------------*/
-
-.intro {
-    position: relative;
-}
-
-.intro__img {
-    box-shadow: var(--bs);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.section__subtitle--intro {
-    display: inline-block;
-}
-
-
-
-@media (min-width: 600px) {
-    .intro {
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 1em;
-        grid-template-areas:
-            "img title"
-            "img subtitle";
-        grid-template-columns: min-content max-content;
-    }
-
-    .intro__img {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .section__title--intro strong {
-        font-size: 3rem;
-    }
-
-    .section__subtitle--intro {
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 2;
-        text-align: right;
-        position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
-    }
-}
-
 
 /* -------------------- My Skills Section --------------------*/
 

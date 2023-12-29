@@ -1,25 +1,68 @@
 <template>
-    <div>
-      <h2>Project: {{ projectId }}</h2>
-      <!-- Project details here -->
+  <div v-if="project">
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        {{ project.title1 }} <strong>{{ project.title2 }}</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">{{ project.subtitle }}</p>
+      <img :src="project.img1" alt="" class="intro__img">
+    </section>
+
+    <div class="portfolio-item-individual">
+      <p v-html="project.description1"></p>
+      <p v-html="project.description2"></p>
+      <img :src="project.img2" alt="">
+      <p v-html="project.description3"></p>
+      <p v-html="project.description4"></p>
+      <p v-html="project.description5"></p>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  export default {
-    name: 'ProjectDetail',
-    props: {
-      id: String
-    },
-    computed: {
-      projectId() {
-        return this.$route.params.id;
-      }
+<script>
+import projectData from '../projects-data.js';
+
+export default {
+  name: 'ProjectDetail',
+  props: {
+    id: {
+      type: String,
+      required: true
     }
-  };
-  </script>
-  
-  <style scoped>
-  /* CSS specific to this component */
-  </style>
+  },
+  computed: {
+    project() {
+      return projectData.find(p => p.id === this.id);
+    }
+  }
+};
+</script>
+
+
+<style scoped>
+.portfolio-item-individual {
+  text-align: justify;
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-item-individual img {
+  width: 100%;
+  height: 25em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-shadow: var(--bs);
+}
+
+.portfolio-item-individual ul {
+  padding-left: 200px;
+}
+</style>
   
