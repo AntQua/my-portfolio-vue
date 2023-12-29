@@ -1,7 +1,7 @@
 <template>
     <header :class="{ 'nav-open': isNavOpen }">
         <div class="logo">
-            <img src="../assets/logo2.png" alt="Logo">
+            <img src="../assets/images/logo2.png" alt="Logo">
         </div>
         <button class="nav-toggle" aria-label="toggle navigation" @click="toggleNav">
             <span class="hamburger"></span>
