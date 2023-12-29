@@ -1,48 +1,69 @@
 <template>
     <header :class="{ 'nav-open': isNavOpen }">
-        <div class="logo">
+        <router-link to="/" class="logo">
             <img src="../assets/images/logo2.png" alt="Logo">
-        </div>
+        </router-link>
         <button class="nav-toggle" aria-label="toggle navigation" @click="toggleNav">
             <span class="hamburger"></span>
         </button>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item" v-for="link in navLinks" :key="link.name">
-                    <a href="#home" class="nav__link" @click="closeNav">{{ link.name }}</a>
+                    <router-link :to="link.to" class="nav__link" @click.prevent="navigateTo(link.to)">{{ link.name
+                    }}</router-link>
                 </li>
             </ul>
         </nav>
     </header>
 </template>
-
+  
 <script>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
-    name: 'TheHeader',
-    setup() {
-        const isNavOpen = ref(false);
+  name: 'TheHeader',
+  setup() {
+    const router = useRouter();
+    const isNavOpen = ref(false);
 
-        function toggleNav() {
-            isNavOpen.value = !isNavOpen.value;
-        }
-
-        function closeNav() {
-            isNavOpen.value = false;
-        }
-
-        const navLinks = [
-            { name: 'Home', href: '#home' },
-            { name: 'What I Do', href: '#skills' },
-            { name: 'About me', href: '#about' },
-            { name: 'My Projects', href: '#projects' }
-        ];
-
-        return { isNavOpen, toggleNav, closeNav, navLinks };
+    function toggleNav() {
+      isNavOpen.value = !isNavOpen.value;
     }
+
+    function closeNav() {
+      isNavOpen.value = false;
+    }
+
+    const navLinks = [
+      { name: 'Home', to: '/' },
+      { name: 'What I Do', to: '/#skills' },
+      { name: 'About me', to: '/#about' },
+      { name: 'My Projects', to: '/#projects' }
+    ];
+
+    function navigateTo(to) {
+      if (to.startsWith('/#')) {
+        // Navigate to the home page, then scroll to the section
+        let hash = to.substring(to.indexOf('#'));
+        router.push('/').then(() => {
+          let section = document.querySelector(hash);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      } else {
+        // Regular route navigation
+        router.push(to);
+      }
+      closeNav();
+    }
+
+    return { isNavOpen, toggleNav, closeNav, navLinks, navigateTo };
+  }
 };
 </script>
+  
 
 <style scoped>
 header {
@@ -158,5 +179,6 @@ header {
 
 .hamburger::after {
     bottom: 6px;
-}</style>
+}
+</style>
   

@@ -5,7 +5,7 @@ import ProjectDetail from './pages/ProjectDetail.vue';
 const routes = [
   {
     path: '/',
-    name: 'TheHome',
+    name: 'Home',
     component: TheHome
   },
   {
