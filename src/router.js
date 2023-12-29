@@ -1,13 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import TheHome from './pages/TheHome.vue';
+import ProjectDetail from './pages/ProjectDetail.vue';
 
 const routes = [
   {
     path: '/',
     name: 'TheHome',
     component: TheHome
+  },
+  {
+    path: '/project/:id',
+    name: 'ProjectDetail',
+    component: ProjectDetail,
+    props: true
   }
-  // Add additional routes here
+  
 ];
 
 const router = createRouter({

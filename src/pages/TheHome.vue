@@ -63,34 +63,34 @@
         <p class="section__subtitle section__subtitle--projects">A selection of my best projects</p>
         <div class="portfolio">
             <!-- Portfolio item 01 -->
-            <a href="Portfolio-pages/project-2Care.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: '2Care' } }" class="portfolio__item">
                 <img src="../assets/images/projects/2Care/2Care.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
 
             <!-- Portfolio item 02 -->
-            <a href="Portfolio-pages/project-SandSpot.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: 'SandSpot' } }" class="portfolio__item">
                 <img src="../assets/images/projects/SandSpot/SandSpot.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
 
             <!-- Portfolio item 03 -->
-            <a href="Portfolio-pages/project-Watchlist.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: 'Whatchlist' } }" class="portfolio__item">
                 <img src="../assets/images/projects/Whatchlist/Watchlist.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
 
             <!-- Portfolio item 04 -->
-            <a href="Portfolio-pages/project-Portfolio.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: 'Portfolio' } }" class="portfolio__item">
                 <img src="../assets/images/projects/Portfolio/Portfolio.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
 
             <!-- Portfolio item 05 -->
-            <a href="Portfolio-pages/project-Botanika.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: 'Botanika' } }" class="portfolio__item">
                 <img src="../assets/images/projects/Botanika/Botanika.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
 
             <!-- Portfolio item 06 -->
-            <a href="Portfolio-pages/project-MyLibrary.html" class="portfolio__item">
+            <router-link :to="{ name: 'ProjectDetail', params: { id: 'MyLibrary' } }" class="portfolio__item">
                 <img src="../assets/images/projects/MyLibrary/MyLibrary.png" alt="" class="portfolio__img">
-            </a>
+            </router-link>
         </div>
     </section>
 </template>
