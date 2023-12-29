@@ -1,6 +1,6 @@
 <template>
   <the-header></the-header>
-  <!-- pages content here -->
+  <router-view></router-view>
   <the-footer></the-footer>
 </template>
 
