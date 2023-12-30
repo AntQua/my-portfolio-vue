@@ -5,20 +5,20 @@ import ProjectDetail from './pages/ProjectDetail.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/home' }, 
     {
-      path: '/home',
+      path: '/',
       name: 'Home',
-      component: TheHome
+      component: TheHome,
     },
     {
       path: '/project/:id',
       name: 'ProjectDetail',
       component: ProjectDetail,
-      props: true
-    }
-  ]
+      props: true,
+    },
+  ],
 });
 
 export default router;
+
 

@@ -16,54 +16,55 @@
         </nav>
     </header>
 </template>
-  
+
 <script>
+// import { ref, nextTick } from 'vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default {
-  name: 'TheHeader',
-  setup() {
-    const router = useRouter();
-    const isNavOpen = ref(false);
+    name: 'TheHeader',
+    setup() {
+        const router = useRouter();
+        const isNavOpen = ref(false);
 
-    function toggleNav() {
-      isNavOpen.value = !isNavOpen.value;
+        function toggleNav() {
+            isNavOpen.value = !isNavOpen.value;
+        }
+
+        function closeNav() {
+            isNavOpen.value = false;
+        }
+
+        const navLinks = [
+            { name: 'Home', to: '/' },
+            { name: 'What I Do', to: '/#skills' },
+            { name: 'About me', to: '/#about' },
+            { name: 'My Projects', to: '/#projects' }
+        ];
+
+        function navigateTo(to) {
+            if (to.startsWith('/#')) {
+                // Navigate to the home page, then scroll to the section
+                let hash = to.substring(to.indexOf('#'));
+                router.push('/').then(() => {
+                    let section = document.querySelector(hash);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            } else {
+                // Regular route navigation
+                router.push(to);
+            }
+            closeNav();
+        }
+        return { isNavOpen, toggleNav, closeNav, navLinks, navigateTo };
+
     }
-
-    function closeNav() {
-      isNavOpen.value = false;
-    }
-
-    const navLinks = [
-      { name: 'Home', to: '/' },
-      { name: 'What I Do', to: '/#skills' },
-      { name: 'About me', to: '/#about' },
-      { name: 'My Projects', to: '/#projects' }
-    ];
-
-    function navigateTo(to) {
-      if (to.startsWith('/#')) {
-        // Navigate to the home page, then scroll to the section
-        let hash = to.substring(to.indexOf('#'));
-        router.push('/').then(() => {
-          let section = document.querySelector(hash);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      } else {
-        // Regular route navigation
-        router.push(to);
-      }
-      closeNav();
-    }
-
-    return { isNavOpen, toggleNav, closeNav, navLinks, navigateTo };
-  }
 };
 </script>
-  
+
 
 <style scoped>
 header {

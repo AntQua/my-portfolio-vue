@@ -19,12 +19,6 @@
     </footer>
 </template>
   
-<!-- <script>
-export default {
-
-    // Composition API logic goes here
-};
-</script> -->
   
 <style scoped>
 .footer {

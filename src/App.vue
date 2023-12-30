@@ -1,14 +1,14 @@
 <template>
   <the-header></the-header>
-  <router-view v-slot="slotProps">
-    <transition name="route" mode="out-in">
-      <component :is="slotProps.Component"></component>
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
     </transition>
   </router-view>
   <the-footer></the-footer>
 </template>
 
-
+<!-- :key="$route.fullPath"  -->
 <script>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
@@ -238,23 +238,14 @@ h3 {
   }
 }
 
-.route-enter-from,
-.route-leave-to {
+/* Fade transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.7s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-}
-
-.route-enter-active {
-  transition: opacity 0.3s ease-out;
-  ;
-}
-
-.route-leave-active {
-  transition: opacity 0.3s ease-in;
-  ;
-}
-
-.route-enter-to,
-.route-leave-from {
-  opacity: 1;
 }
 </style>
