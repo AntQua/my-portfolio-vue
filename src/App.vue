@@ -1,6 +1,10 @@
 <template>
   <the-header></the-header>
-  <router-view></router-view>
+  <router-view v-slot="slotProps">
+    <transition name="route" mode="out-in">
+      <component :is="slotProps.Component"></component>
+    </transition>
+  </router-view>
   <the-footer></the-footer>
 </template>
 
@@ -130,110 +134,127 @@ h3 {
 
 /* Buttons */
 
-.btn{
-    display: inline-block;
-    padding: .5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bold);
-    transition: transform 200ms ease-in-out;
+.btn {
+  display: inline-block;
+  padding: .5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    color: var(--clr-dark);
+  transform: scale(1.1);
+  color: var(--clr-dark);
 }
 
-.section__title{
-    margin-bottom: .25em;
+.section__title {
+  margin-bottom: .25em;
 }
 
-.section__title--intro{
-    font-weight: var(--fw-reg);
+.section__title--intro {
+  font-weight: var(--fw-reg);
 }
 
-.section__title--intro strong{
-    display: block;
+.section__title--intro strong {
+  display: block;
 }
 
-.section__subtitle{
-    margin: 0;
-    font-size: var(--fs-h3);
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
 }
 
 .section__subtitle--intro,
-.section__subtitle--about
-{
-    background: var(--clr-accent);
-    padding: .025em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+.section__subtitle--about {
+  background: var(--clr-accent);
+  padding: .025em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
 }
 
 .section__subtitle--projects {
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
 }
 
 
 /* -------------------- Intro Section --------------------*/
 
 .intro {
-    position: relative;
+  position: relative;
 }
 
 .intro__img {
-    box-shadow: var(--bs);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  box-shadow: var(--bs);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section__subtitle--intro {
-    display: inline-block;
+  display: inline-block;
 }
 
 
 
 @media (min-width: 600px) {
-    .intro {
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 1em;
-        grid-template-areas:
-            "img title"
-            "img subtitle";
-        grid-template-columns: min-content max-content;
-    }
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
 
-    .intro__img {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }
+  .intro__img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+  }
 
-    .section__title--intro strong {
-        font-size: 3rem;
-    }
+  .section__title--intro strong {
+    font-size: 3rem;
+  }
 
-    .section__subtitle--intro {
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 2;
-        text-align: right;
-        position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
-    }
+  .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
 }
 
+.route-enter-from,
+.route-leave-to {
+  opacity: 0;
+}
 
+.route-enter-active {
+  transition: opacity 0.3s ease-out;
+  ;
+}
+
+.route-leave-active {
+  transition: opacity 0.3s ease-in;
+  ;
+}
+
+.route-enter-to,
+.route-leave-from {
+  opacity: 1;
+}
 </style>
