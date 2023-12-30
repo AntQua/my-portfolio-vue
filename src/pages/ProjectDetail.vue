@@ -15,6 +15,14 @@
       <p v-html="project.description3"></p>
       <p v-html="project.description4"></p>
       <p v-html="project.description5"></p>
+      <p>To explore the project, visit the 
+        <a :href="project.urlProj" target="_blank">
+          <strong>{{ project.title1 }}</strong> <i class="fa-solid fa-link"></i>
+        </a> website.
+      </p>
+      <p>For a deeper look into the project's codebase, you can check out the <a
+          :href="project.urlGitHub" target="_blank"><i class="fa-brands fa-github"></i>
+          GitHub repository.</a></p>
     </div>
   </div>
 </template>
