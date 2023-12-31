@@ -36,7 +36,8 @@
                         Rails and basic UX/UI design principles.</p>
                 </div>
             </div>
-            <a href="#projects" class="btn">my projects</a>
+
+            <a href="#" class="btn" @click.prevent="scrollToProjects">my projects</a>
             <a href="#top" class="go-top__skills" @click.prevent="scrollToTop">
                 <i class="fa-regular fa-circle-up"></i>
             </a>
@@ -101,12 +102,18 @@
   
 <script>
 export default {
-  name: 'TheHome',
-  methods: {
-    scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    name: 'TheHome',
+    methods: {
+        scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },
+        scrollToProjects() {
+            const element = document.getElementById('projects');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     },
-  },
 };
 </script>
   
