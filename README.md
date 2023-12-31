@@ -1,7 +1,7 @@
 # My Portfolio in Vue 3
 
 ## Description
-"My Portfolio in Vue 3" is my first project developed using the Vue 3 framework. This portfolio website showcases my journey and skills as a developer. Having learned Vue 3 recently, I decided to transition my portfolio, which was originally built using HTML, CSS, and JavaScript, to this modern and dynamic framework. The design and functionality remain consistent with my original portfolio, offering a seamless user experience.
+"My Portfolio in Vue 3" is my first project developed using the Vue 3 framework. This portfolio website showcases my journey and skills as a junior developer. Having learned Vue 3 recently, I decided to transition my portfolio, which was originally built using HTML, CSS, and JavaScript, to this modern and dynamic framework. The design and functionality remain consistent with my original portfolio, offering a seamless user experience.
 
 ## Technologies Used
 - Vue.js 3

@@ -30,19 +30,19 @@ export default [
         description5: '<p><strong>Azure Resources:</strong></p> <ul><li>Azure App Service - Is an HTTP-based service to host the generated web application for this project.</li> <li>SQL database - Azure SQL Database is based on SQL Server and provides the core functionality relational data required for the project, namely products, categories and orders of customers.</li> <li>Storage account - The images are stored in several Containers provided by the blob service of Storage account. The use of this resource is used in the Backoffice of our application for management of the images used and supplying them to the application.</li> <li>Resourse Group - All the aforementioned Azure services are hosted in a Resource Exclusive group for this project that acts as a repository for administration thereof.</li> </ul> <p><strong>Version Control:</strong> Azure DevOps server. </p> <p><strong>CI-CD Solution:</strong> Deployments through Azure DevOps server </p>'
       },
       {
-        id: 'MyLibrary',
-        title1: 'MyLibrary',
+        id: 'MyPortfolio',
+        title1: 'My Portfolio',
         title2: 'Individual project',
-        subtitle: 'My Library Project',
-        img1: require('./assets/images/projects/MyLibrary/MyLibrary.png'),
-        img2: require('./assets/images/projects/MyLibrary/MyLibrary-details.png'),
-        urlProj: 'https://antqua.github.io/MyLibrary/',
-        urlGitHub: 'https://github.com/AntQua/MyLibrary',
-        description1: '<strong>MyLibrary</strong> is a single page who allows the user to input its favourit books and keeping track of its read status.',
-        description2: '',
-        description3: 'Note that there is no back-end so the books are not stored in a database so they will vanish when the page is reloaded. The goal of this project was just for training.',
-        description4: '',
-        description5: '<strong>MyLibrary</strong> was built using only <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong> and deployed on <strong>GitHub Pages</strong>'
+        subtitle: 'My Portfolio in Vue 3',
+        img1: require('./assets/images/projects/MyPortfolio/MyPortfolio.png'),
+        img2: require('./assets/images/projects/MyPortfolio/MyPortfolio-details.png'),
+        urlProj: 'https://antqua.github.io/MyPortfolio/',
+        urlGitHub: 'https://github.com/AntQua/my-portfolio-vue',
+        description1: '<strong>My Portfolio</strong> is my first project developed using the Vue 3 framework.',
+        description2: 'This portfolio website showcases my journey and skills as a junior developer.',
+        description3: 'Having learned Vue 3 recently, I decided to transition my portfolio, which was originally built using HTML, CSS, and JavaScript, to this modern and dynamic framework.',
+        description4: 'The design and functionality remain consistent with my original portfolio, offering a seamless user experience.',
+        description5: 'This project was built using the <strong>Vue 3</strong> framework and deployed on <strong>GitHub Pages</strong>'
       },
       {
         id: 'Portfolio',

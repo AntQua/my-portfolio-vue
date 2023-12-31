@@ -82,7 +82,7 @@ export default {
 
 .portfolio-item-individual img {
   width: 100%;
-  height: 25em;
+  height: 30em;
   /* Adjust this height as needed */
   margin-top: 2em;
   margin-bottom: 2em;

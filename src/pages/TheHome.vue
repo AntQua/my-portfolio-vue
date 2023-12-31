@@ -89,8 +89,8 @@
                 </router-link>
     
                 <!-- Portfolio item 06 -->
-                <router-link :to="{ name: 'ProjectDetail', params: { id: 'MyLibrary' } }" class="portfolio__item">
-                    <img src="../assets/images/projects/MyLibrary/MyLibrary.png" alt="" class="portfolio__img">
+                <router-link :to="{ name: 'ProjectDetail', params: { id: 'MyPortfolio' } }" class="portfolio__item">
+                    <img src="../assets/images/projects/MyPortfolio/MyPortfolio.png" alt="" class="portfolio__img">
                 </router-link>
             </div>
         </section>
