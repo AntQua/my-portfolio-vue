@@ -36,7 +36,7 @@ export default [
         subtitle: 'My Portfolio in Vue 3',
         img1: require('./assets/images/projects/MyPortfolio/MyPortfolio.png'),
         img2: require('./assets/images/projects/MyPortfolio/MyPortfolio-details.png'),
-        urlProj: 'https://antqua.github.io/MyPortfolio/',
+        urlProj: 'https://antqua.github.io/my-portfolio-vue/#/',
         urlGitHub: 'https://github.com/AntQua/my-portfolio-vue',
         description1: '<strong>My Portfolio</strong> is my first project developed using the Vue 3 framework.',
         description2: 'This portfolio website showcases my journey and skills as a junior developer.',

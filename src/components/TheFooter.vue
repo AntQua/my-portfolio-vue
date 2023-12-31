@@ -1,6 +1,8 @@
 <template>
     <footer class="footer">
-        <a href="#top" class="go-top__footer"><i class="fa-regular fa-circle-up"></i></a>
+        <a href="#top" class="go-top__footer" @click.prevent="scrollToTop">
+            <i class="fa-regular fa-circle-up"></i>
+        </a>
         <a href="mailto:tozequa@gmail.com" class="footer__link">Email Me</a>
         <ul class="social-list">
 
@@ -19,6 +21,17 @@
     </footer>
 </template>
   
+<script>
+export default {
+    name: 'TheFooter',
+    methods: {
+        scrollToTop() {
+            // Scroll to the top of the window smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },
+    },
+};
+</script>
   
 <style scoped>
 .footer {
@@ -28,7 +41,7 @@
     padding: 2.5em 0;
     font-size: var(--fs-h3);
     position: relative;
-} 
+}
 
 .go-top__footer {
     position: absolute;

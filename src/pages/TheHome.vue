@@ -8,7 +8,7 @@
             <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
             <img src="../assets/images/intro_pic.jpg" alt="a picture of Antonio posing and smiling" class="intro__img">
         </section>
-    
+
         <!-- My Skills -->
         <section class="my-skills" id="skills">
             <h2 class="section__title section__title--skills">What I do</h2>
@@ -19,7 +19,7 @@
                         like Ruby or C#. I work on databases, build APIs, and handle server-side logic. I'm also gaining
                         knowledge in security and scalability to support web applications.</p>
                 </div>
-    
+
                 <div class="skill">
                     <h3>Full-Stack Development</h3>
                     <p>As a junior full-stack developer, I possess skills in both front-end and back-end development. I
@@ -27,7 +27,7 @@
                         Ruby on Rails. On the server-side, I manage databases, build APIs, and ensure security and
                         scalability for web application</p>
                 </div>
-    
+
                 <div class="skill">
                     <h3>Front-End Development</h3>
                     <p> As a junior front-end developer, I have foundational skills in HTML, CSS, and JavaScript. My focus
@@ -37,14 +37,16 @@
                 </div>
             </div>
             <a href="#projects" class="btn">my projects</a>
-            <a href="#top" class="go-top__skills"><i class="fa-regular fa-circle-up"></i></a>
+            <a href="#top" class="go-top__skills" @click.prevent="scrollToTop">
+                <i class="fa-regular fa-circle-up"></i>
+            </a>
         </section>
-    
+
         <!-- About me -->
         <section class="about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
             <p class="section__subtitle section__subtitle--about">Web Developer based in Lisbon</p>
-    
+
             <div class="about-me__body">
                 <p>I'm deeply passionate about off-grid living, permaculture, and exploring the natural and cultural world
                     through travel. These interests fuel my personal journey and inspire my creativity.</p>
@@ -54,10 +56,10 @@
                 <p>Looking ahead, I'm committed to continuous learning and growth in web development, eager to contribute my
                     unique blend of experiences and skills to create innovative and impactful software solutions.</p>
             </div>
-    
+
             <img src="../assets/images/having_tea.jpg" alt="Antonio having tea" class="about-me__img">
         </section>
-    
+
         <!-- My Projects -->
         <section class="my-projects" id="projects">
             <h2 class="section__title section__title--projects">My Projects</h2>
@@ -67,27 +69,27 @@
                 <router-link :to="{ name: 'ProjectDetail', params: { id: '2Care' } }" class="portfolio__item">
                     <img src="../assets/images/projects/2Care/2Care.png" alt="" class="portfolio__img">
                 </router-link>
-    
+
                 <!-- Portfolio item 02 -->
                 <router-link :to="{ name: 'ProjectDetail', params: { id: 'SandSpot' } }" class="portfolio__item">
                     <img src="../assets/images/projects/SandSpot/SandSpot.png" alt="" class="portfolio__img">
                 </router-link>
-    
+
                 <!-- Portfolio item 03 -->
                 <router-link :to="{ name: 'ProjectDetail', params: { id: 'Whatchlist' } }" class="portfolio__item">
                     <img src="../assets/images/projects/Whatchlist/Watchlist.png" alt="" class="portfolio__img">
                 </router-link>
-    
+
                 <!-- Portfolio item 04 -->
                 <router-link :to="{ name: 'ProjectDetail', params: { id: 'Portfolio' } }" class="portfolio__item">
                     <img src="../assets/images/projects/Portfolio/Portfolio.png" alt="" class="portfolio__img">
                 </router-link>
-    
+
                 <!-- Portfolio item 05 -->
                 <router-link :to="{ name: 'ProjectDetail', params: { id: 'Botanika' } }" class="portfolio__item">
                     <img src="../assets/images/projects/Botanika/Botanika.png" alt="" class="portfolio__img">
                 </router-link>
-    
+
                 <!-- Portfolio item 06 -->
                 <router-link :to="{ name: 'ProjectDetail', params: { id: 'MyPortfolio' } }" class="portfolio__item">
                     <img src="../assets/images/projects/MyPortfolio/MyPortfolio.png" alt="" class="portfolio__img">
@@ -99,13 +101,16 @@
   
 <script>
 export default {
-    name: 'TheHome'
-    // Any additional component logic goes here
+  name: 'TheHome',
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+  },
 };
 </script>
   
 <style scoped>
-
 /* -------------------- My Skills Section --------------------*/
 
 .my-skills {
