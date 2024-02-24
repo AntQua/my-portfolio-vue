@@ -74,20 +74,35 @@ export default [
         description4: "",
         description5: "<strong>SandSpot</strong> was built using the <strong>Ruby on Rails</strong>  framework and deployed on <strong>Heroku</strong>. The app's design was crafted with <strong>Figma</strong>."
       },
+      // {
+      //   id: 'Whatchlist',
+      //   title1: "Whatchlist",
+      //   title2: 'Solo project @LeWagon',
+      //   subtitle: 'movies list by category',
+      //   img1: require('./assets/images/projects/Whatchlist/Watchlist.png'),
+      //   img2: require('./assets/images/projects/Whatchlist/Watchlist-details.png'),
+      //   urlProj: 'https://antqua-movies-289be53429bf.herokuapp.com/',
+      //   urlGitHub: 'https://github.com/AntQua/rails-watch-list',
+      //   description1: "<strong>Watchlist</strong> is a individual project of my Web Development bootcamp at LeWagon, Lisbon, finished in 8th September 2023.",
+      //   description2: '',
+      //   description3: "<strong>Watchlist</strong> is a web application designed to create movies categories and for each category create a personal movies list.",
+      //   description4: '',
+      //   description5: "<strong>Watchlist</strong> was built using the <strong>Ruby on Rails</strong>  framework and deployed on <strong>Heroku</strong>. The app's images are stored on <strong>Cloudinary</strong>."
+      // },
       {
-        id: 'Whatchlist',
-        title1: "Whatchlist",
-        title2: 'Solo project @LeWagon',
-        subtitle: 'movies list by category',
-        img1: require('./assets/images/projects/Whatchlist/Watchlist.png'),
-        img2: require('./assets/images/projects/Whatchlist/Watchlist-details.png'),
-        urlProj: 'https://antqua-movies-289be53429bf.herokuapp.com/',
-        urlGitHub: 'https://github.com/AntQua/rails-watch-list',
-        description1: "<strong>Watchlist</strong> is a individual project of my Web Development bootcamp at LeWagon, Lisbon, finished in 8th September 2023.",
+        id: 'GameHub',
+        title1: "GameHub",
+        title2: 'Individual project',
+        subtitle: 'Video Game Discovery App',
+        img1: require('./assets/images/projects/GameHub/GameHub.png'),
+        img2: require('./assets/images/projects/GameHub/GameHub-details.png'),
+        urlProj: 'https://game-hub-iota-seven-72.vercel.app/',
+        urlGitHub: 'https://github.com/AntQua/game-hub',
+        description1: "<strong>GameHub</strong> is a Video Game Discovery App build with React, TypeScript and Vite, utilizing the RAWG API to fetch game data. It aims to mimic the frontend and game display style of RAWG's website.",
         description2: '',
-        description3: "<strong>Watchlist</strong> is a web application designed to create movies categories and for each category create a personal movies list.",
+        description3: "<strong>GameHub</strong> is a web application who displays games in a visually appealing manner and Provides detailed information about each game.",
         description4: '',
-        description5: "<strong>Watchlist</strong> was built using the <strong>Ruby on Rails</strong>  framework and deployed on <strong>Heroku</strong>. The app's images are stored on <strong>Cloudinary</strong>."
+        description5: "<strong>GameHub</strong> was built using the <strong>React</strong> library and deployed in <strong>Vercel</strong>."
       },
       
   ];
