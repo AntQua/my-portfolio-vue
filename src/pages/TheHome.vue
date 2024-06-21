@@ -5,7 +5,11 @@
       <h1 class="section__title section__title--intro">
         Hi, I am <strong>António Quaresma</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+      <p class="section__subtitle section__subtitle--intro">
+        junior full-stack dev<br />
+        & junior data scientist
+      </p>
+
       <img
         src="../assets/images/intro_pic.jpg"
         alt="a picture of Antonio posing and smiling"
@@ -15,43 +19,135 @@
 
     <!-- My Skills -->
     <section class="my-skills" id="skills">
-      <h2 class="section__title section__title--skills">What I do</h2>
-      <div class="skills">
-        <div class="skill">
-          <h3>Back-End Development</h3>
-          <p>
-            As a junior back-end developer, I possess fundamental skills in
-            server-side programming languages like Ruby or C#. I work on
-            databases, build APIs, and handle server-side logic. I'm also
-            gaining knowledge in security and scalability to support web
-            applications.
-          </p>
-        </div>
+      <h2 class="section__title section__title--skills">What I Do</h2>
 
-        <div class="skill">
-          <h3>Full-Stack Development</h3>
-          <p>
-            As a junior full-stack developer, I possess skills in both front-end
-            and back-end development. I create user-friendly interfaces using
-            HTML, CSS, and JavaScript, along with frameworks like .NET or Ruby
-            on Rails. On the server-side, I manage databases, build APIs, and
-            ensure security and scalability for web application
-          </p>
-        </div>
+      <!-- Web Development Skills -->
+      <div class="skills-category">
+        <h3 class="category__title">Web Development</h3>
+        <div class="skills">
+          <div class="skill">
+            <h4>Back-End Development</h4>
+            <p>
+              As a back-end developer, I possess skills in server-side
+              programming languages like Ruby, C# and Python. I work on
+              databases, build APIs, and handle server-side logic. I have
+              experience in security and scalability to support web
+              applications.
+            </p>
+          </div>
 
-        <div class="skill">
-          <h3>Front-End Development</h3>
-          <p>
-            As a junior front-end developer, I have foundational skills in HTML,
-            CSS, and JavaScript. My focus is on creating user interfaces,
-            ensuring web pages are visually appealing, responsive, and
-            cross-browser compatible. I'm also working on becoming familiar with
-            frameworks like Vue or Rails and basic UX/UI design principles.
-          </p>
+          <div class="skill">
+            <h4>Full-Stack Development</h4>
+            <p>
+              As a full-stack developer, I create user-friendly interfaces using
+              HTML, CSS, and JavaScript, along with frameworks like .NET and
+              Ruby on Rails. On the server-side, I manage databases, build APIs,
+              and ensure security and scalability for web applications.
+            </p>
+          </div>
+
+          <div class="skill">
+            <h4>Front-End Development</h4>
+            <p>
+              As a front-end developer, I have strong skills in HTML, CSS, and
+              JavaScript. I focus on creating user interfaces, ensuring web
+              pages are visually appealing, responsive, and cross-browser
+              compatible. I'm also proficient with frameworks like Vue and have
+              a solid understanding of basic UX/UI design principles.
+            </p>
+          </div>
         </div>
       </div>
 
-      <a href="#" class="btn" @click.prevent="scrollToProjects">my projects</a>
+      <!-- Data Science & AI Skills -->
+      <div class="skills-category">
+        <h3 class="category__title">Data Science & AI</h3>
+        <div class="skills-ds">
+          <div class="skills-row">
+            <div class="skill">
+              <h4>Data Analysis</h4>
+              <p>
+                I have expertise in data analysis using Python and R. I can
+                perform data cleaning, exploratory data analysis, and data
+                visualization to extract insights. I use tools like Pandas,
+                NumPy, and Jupyter Notebooks for effective data manipulation and
+                visualization.
+              </p>
+            </div>
+
+            <div class="skill">
+              <h4>Machine Learning</h4>
+              <p>
+                I am skilled in building and deploying machine learning models
+                for classification, regression, and clustering tasks using
+                libraries such as scikit-learn, XGBoost, and TensorFlow. I have
+                experience in model evaluation, hyperparameter tuning, and
+                deploying models in production environments.
+              </p>
+            </div>
+
+            <div class="skill">
+              <h4>Data Visualization</h4>
+              <p>
+                I can create compelling and interactive data visualizations
+                using tools like Matplotlib, Seaborn, and Plotly. I focus on
+                creating visualizations that effectively communicate data
+                insights and support data-driven decision-making.
+              </p>
+            </div>
+
+            <div class="skill">
+              <h4>Deep Learning</h4>
+              <p>
+                I have experience in deep learning using frameworks like
+                TensorFlow and Keras. I can build and optimize neural networks
+                for various applications, including image recognition, natural
+                language processing, and generative models. I also have
+                experience in using pre-trained models and fine-tuning them for
+                specific tasks.
+              </p>
+            </div>
+          </div>
+          <div class="skills-row">
+            <div class="skill">
+              <h4>Big Data and Data Engineering</h4>
+              <p>
+                I have gained comprehensive knowledge in data engineering,
+                focusing on the management and processing of large-scale
+                datasets. My skills include setting up data pipelines, ensuring
+                data quality, and implementing data warehousing solutions. I am
+                proficient in using various data engineering tools and
+                techniques to ensure efficient and scalable data processing,
+                aligning with best practices in the field of data science.
+              </p>
+            </div>
+
+            <div class="skill">
+              <h4>Machine Learning Engineering</h4>
+              <p>
+                I am proficient in packaging machine learning models for
+                production using tools like Docker and FastAPI. I have
+                experience with MLOps practices, including continuous
+                integration and continuous deployment (CI/CD) for maintaining
+                and updating machine learning models.
+              </p>
+            </div>
+
+            <div class="skill">
+              <h4>Generative AI</h4>
+              <p>
+                I have explored generative AI techniques and tools, such as
+                ChatGPT and Copilot, for enhancing coding efficiency and
+                developing innovative applications. I am also aware of the
+                ethical considerations and best practices for implementing
+                explainable AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn" @click.prevent="scrollToProjects">My Projects</a>
       <a href="#top" class="go-top__skills" @click.prevent="scrollToTop">
         <i class="fa-regular fa-circle-up"></i>
       </a>
@@ -230,13 +326,21 @@ export default {
   opacity: 0.4;
 }
 
-.skills {
+.skills,
+.skills-ds {
   margin-bottom: 4em;
 }
 
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
 .skill {
-  max-width: 500px;
+  max-width: auto;
   margin: 0 auto;
+  /* flex: 1 1 calc(25% - 1em);  */
 }
 
 .go-top__skills {
@@ -251,9 +355,9 @@ export default {
 @media (min-width: 800px) {
   .skills {
     display: flex;
-    max-width: 1000px;
+    /* max-width: auto;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
   }
 
   .skill + .skill {
