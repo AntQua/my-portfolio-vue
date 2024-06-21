@@ -231,11 +231,11 @@
 
         <!-- Portfolio item 04 -->
         <router-link
-          :to="{ name: 'ProjectDetail', params: { id: 'Portfolio' } }"
+          :to="{ name: 'ProjectDetail', params: { id: 'UFO' } }"
           class="portfolio__item"
         >
           <img
-            src="../assets/images/projects/Portfolio/Portfolio.png"
+            src="../assets/images/projects/UFO/UFO_pred.png"
             alt=""
             class="portfolio__img"
           />
@@ -310,6 +310,10 @@ export default {
   text-align: center;
 }
 
+.category__title {
+  font-size: 3rem;
+}
+
 .section__title--skills {
   color: var(--clr-accent);
   position: relative;
@@ -331,11 +335,11 @@ export default {
   margin-bottom: 4em;
 }
 
-.skills-row {
+/* .skills-row {
   display: flex;
   justify-content: center;
   gap: 1em;
-}
+} */
 
 .skill {
   max-width: auto;
@@ -358,6 +362,12 @@ export default {
     /* max-width: auto;
     margin-left: auto;
     margin-right: auto; */
+  }
+
+  .skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
   }
 
   .skill + .skill {
