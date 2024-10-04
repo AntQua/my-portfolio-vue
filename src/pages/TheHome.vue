@@ -264,6 +264,7 @@
             class="portfolio__img"
           />
         </router-link>
+
         <!-- Portfolio item 07 -->
         <router-link
           :to="{ name: 'ProjectDetail', params: { id: 'GameHub' } }"
@@ -271,6 +272,18 @@
         >
           <img
             src="../assets/images/projects/GameHub/GameHub.png"
+            alt=""
+            class="portfolio__img"
+          />
+        </router-link>
+
+        <!-- Portfolio item 08 -->
+        <router-link
+          :to="{ name: 'ProjectDetail', params: { id: 'Data_Analytics' } }"
+          class="portfolio__item"
+        >
+          <img
+            src="../assets/images/projects/Data_Analytics/img_bundle.png"
             alt=""
             class="portfolio__img"
           />

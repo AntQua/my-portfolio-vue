@@ -104,6 +104,22 @@ export default [
         description4: '',
         description5: "<strong>GameHub</strong> was built using the <strong>React</strong> library and deployed in <strong>Vercel</strong>."
       },
+      {
+        id: 'Data_Analytics',
+        title1: "Data Analytics",
+        title2: 'Individual projects',
+        subtitle: "Data Analytics projects",
+        img1: require('./assets/images/projects/Data_Analytics/img_bundle.png'),
+        img2: require('./assets/images/projects/Data_Analytics/img_tableau.png'),
+        urlProj: '',
+        urlGitHub: '',
+        description1: `This is a 4 projects bundle I made as part of the <a href="https://coursera.org/share/b0a21874c636bdb3b212ad15979debc7" target="_blank">Google Advanced Data Analytics Specialization Certificate</a> on Coursera. They were created as practice projects to apply the skills learned during the course, focusing on advanced data analytics techniques such as regression modeling and machine learning.`,
+        description2: 'All the projects are displayed on <strong>GitHub</strong> <i class="fa-brands fa-github"></i>. Follow the links bellow for each project.',
+        description3: `<a href="https://github.com/AntQua/Predicting-Employee-Churn" target="_blank">Predicting Employee Churn</a> - Predictive modeling project to analyze and forecast employee turnover at Salifort Motors, using various machine learning techniques to improve retention and reduce turnover costs.`,
+        description4: `<a href="https://github.com/AntQua/Waze-Churn-Prediction" target="_blank">Waze Churn Prediction</a> - A machine learning model designed to predict user churn for Waze, aiming to improve retention rates and inform data-driven strategies for user engagement and growth.`,
+        description5: `<a href="https://github.com/AntQua/TikTok-Claim-Prediction" target="_blank">TikTok Claim Prediction</a> - A predictive model for detecting claims and opinions in TikTok videos, designed to optimize content moderation and improve the efficiency of user report handling.`,
+        description6: `<a href="https://github.com/AntQua/Predicting_Taxi_Tips_NYC" target="_blank">Automatidata - Predicting Taxi Tips in NYC</a> - Machine learning project focused on predicting taxi tips in NYC based on trip data.`,
+      },
       
   ];
   
